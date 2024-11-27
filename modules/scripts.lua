@@ -1,6 +1,3 @@
--- all functions in this module will be available to use as long as we specify it in our register() hook
-
-
 -----------------------
 --- GENERAL SCRIPTS ---
 -----------------------
@@ -19,6 +16,7 @@ function command_treats(args)
   api_give_item("flower14", 1)
   api_give_item("bee:nightcrawler", 1)
   api_give_item("npc69", 1)
+  api_give_item("npc70", 1)
 
 end
 

@@ -1,8 +1,6 @@
--- This is the Sample Mod!
+-- Aqui empieza el codigo 100% mio >:DD
 
--- I would recommend keeping your mod_id in a variable to access with create() methods and stuff
--- there's a bunch of methods that prepend your mod_id to the name/oids so it comes in handy!
-MOD_NAME = "sample_mod"
+MOD_NAME = "Momos_mod"
 
 -- store a ref to our book menu for later
 MY_BOOK_MENU = nil
@@ -16,8 +14,8 @@ function register()
   -- https://wiki.apico.buzz/wiki/Modding_API#Hooks
   return {
     name = MOD_NAME,
-    hooks = {"ready"}, -- subscribe to hooks we want so they're called
-    modules = {"define", "scripts"} -- load other modules we need, in this case "/modules/define.lua" and "/modules/scripts.lua"
+    hooks = {"ready"}, -- Suscríbete a los ganchos que queremos para que se llamen
+    modules = {"define", "scripts"} -- Cargue otros módulos que necesitamos, en este caso "/Modules/define.lua" y "/Modules/Scripts.lua"
   }
 end
 
@@ -38,7 +36,7 @@ function init()
   -- define a new item, in this case an axe
   define_item()
   -- define our mod workbench labels (for our item's recipe)
-  api_define_workbench("Sample Mod", {
+  api_define_workbench("Momos Mod", {
     t1 = "Sample Tab 1",
     t2 = "Sample Tab 2",
     t3 = "Sample Tab 3",
@@ -57,10 +55,11 @@ function init()
   define_flower()
   -- define a new type of bee
   define_bee()
-  -- define a new NPC
+
   define_npc()
-  -- define a new menu object, in this case a "recycler" that turns items into seeds 
-  -- WARNING: advanced
+
+  define_npc_2()
+
   define_recycler()
 
   -- define a custom command so we can spawn in all our new goodies
